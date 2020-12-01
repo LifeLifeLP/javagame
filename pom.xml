@@ -32,7 +32,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>Main</mainClass>
+                            <mainClass>Display</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Created-By>LifeLifeLP</Created-By>
