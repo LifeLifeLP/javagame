@@ -1,18 +1,19 @@
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Game {
     private Display display;
-    private Rectangle rectangle;
+    private List<GameObject> gameObjects;
 
     public Game(int widh, int hight){
         display = new Display(widh,hight);
-        rectangle = new Rectangle(0,0,50,50);
+        gameObjects = new ArrayList<>();
+        gameObjects.add(new Square());
 
     }
 
     public void update() {
-        rectangle.setLocation(rectangle.x + 1,rectangle.y + 1);
-
+        gameObjects.forEach(gameObject -> gameObject.update());
     }
 
     public void render() {
@@ -20,7 +21,7 @@ public class Game {
 
     }
 
-    public Rectangle getRectangle() {
-        return rectangle;
+    public List<GameObject> getGameObjects() {
+        return gameObjects;
     }
 }
